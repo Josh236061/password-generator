@@ -7,16 +7,16 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword(length, lowercase, uppercase, numeric, specialcharacters) {
   var password = '';
   var str = '';
-  if (uppercase == "on"){
+  if (uppercase){
     str += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   }
-  if (lowercase == "on"){
+  if (lowercase){
       str += 'abcdefghijklmnopqrstuvwxyz';
   }
-  if (numeric == "on"){
+  if (numeric){
       str += '0123456789';
   }
-  if (specialcharacters == "on"){
+  if (specialcharacters){
       str += '@#$';
   }
   for (let i = 1; i <= length; i++) {
@@ -33,22 +33,19 @@ function generatePassword(length, lowercase, uppercase, numeric, specialcharacte
 function writePassword() {
 var form = document.querySelector("#constraints");
 var length = document.getElementById("length").value;
-var lowercase = document.getElementById("lowercase").value;
-var uppercase = document.getElementById("uppercase").value;
-var numeric = document.getElementById("numeric").value;
-var specialcharacters = document.getElementById("special-characters").value;
+var lowercase = document.getElementById("lowercase").checked;
+var uppercase = document.getElementById("uppercase").checked;
+var numeric = document.getElementById("numeric").checked;
+var specialcharacters = document.getElementById("special-characters").checked;
 checked = document.querySelectorAll("input[type=checkbox]:checked").length;
-console.log(checked);
 if(!checked) {
   alert("You must check at least one checkbox.");
   return false;
 }
-console.log(lowercase);
   var password = generatePassword(length, lowercase, uppercase, numeric, specialcharacters);
-  console.log(password);
-  /* var passwordText = document.querySelector("#password");
+  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password; */
+  passwordText.value = password;
 
 }
 
