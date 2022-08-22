@@ -16,6 +16,14 @@
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
+        <form id="constraints">
+          <label for="length">Length:</label><br>
+          <input type="number" min="8" max="128" id="length" name="length"><br>
+          <input type="checkbox" id="lowercase">
+          <input type="checkbox" id="uppercase">
+          <input type="checkbox" id="numeric">
+          <input type="checkbox" id="special-characters">
+        </form>
         <div class="card-body">
           <textarea
             readonly
