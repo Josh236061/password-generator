@@ -29,3 +29,5 @@ THEN the password is either displayed in an alert or written to the page
 GitHub URL: https://github.com/Josh236061/password-generator/
 
 Published Website URL: https://josh236061.github.io/password-generator/
+
+Screenshot: <img width="676" alt="image" src="https://user-images.githubusercontent.com/71394743/187575119-17da5d99-2f14-4b1b-a822-5eced2495bf8.png">
